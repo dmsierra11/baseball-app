@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "fantasy-baseball-ui": "/Users/danielsierra/Projects/fantasy-baseball-ui",
+    "fantasy-baseball-ui": "1.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

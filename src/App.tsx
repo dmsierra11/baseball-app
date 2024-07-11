@@ -37,7 +37,7 @@ const App: React.FC = () => {
           <GamesList games={matches} sectionTitle={"Próximos Partidos"} />
           <Standings
             title="Liga Unica"
-            leagueTable={[
+            leagueTables={[
               {
                 division: "AL East",
                 teams: standings
@@ -47,6 +47,7 @@ const App: React.FC = () => {
                 teams: standings
               }
             ]}
+            stackDirection={`${isXs ? "column" : "row"}`}
           />
         </Stack>
       </Grid>
