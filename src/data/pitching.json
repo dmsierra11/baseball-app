@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Harold Bermúdez",
+    "team": "PHI",
+    "stats": {
+      "IP": 10,
+      "GS": 10,
+      "W": 10,
+      "L": 10,
+      "SV": 10,
+      "HR": 10,
+      "K": 10,
+      "WP": 10,
+      "GIDP": 10,
+      "HLD": 10,
+      "ERA": 10,
+      "WHIP": 10,
+      "RW": 10,
+      "QS": 10,
+      "BSV": 2
+    }
+  },
+  {
+    "name": "Fercho Mayorca",
+    "team": "BAL",
+    "stats": {
+      "IP": 10,
+      "GS": 10,
+      "W": 10,
+      "L": 10,
+      "SV": 10,
+      "HR": 10,
+      "K": 10,
+      "WP": 10,
+      "GIDP": 10,
+      "HLD": 10,
+      "ERA": 10,
+      "WHIP": 10,
+      "RW": 10,
+      "QS": 10,
+      "BSV": 2
+    }
+  }
+]

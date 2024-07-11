@@ -1,0 +1,130 @@
+[
+  {
+    "id": "1",
+    "homeTeam": {
+      "logoUrl": "https://midfield.mlbstatic.com/v1/team/147/spots/72",
+      "name": "New York Yankees",
+      "shortName": "NYY",
+      "record": "10-2"
+    },
+    "awayTeam": {
+      "logoUrl": "https://midfield.mlbstatic.com/v1/team/110/spots/72",
+      "name": "Baltimore Orioles",
+      "shortName": "BAL",
+      "record": "10-2"
+    },
+    "date": "May-01"
+  },
+  {
+    "id": "2",
+    "homeTeam": {
+      "logoUrl": "https://midfield.mlbstatic.com/v1/team/147/spots/72",
+      "name": "New York Yankees",
+      "shortName": "NYY",
+      "record": "10-2"
+    },
+    "awayTeam": {
+      "logoUrl": "https://midfield.mlbstatic.com/v1/team/110/spots/72",
+      "name": "Baltimore Orioles",
+      "shortName": "BAL",
+      "record": "10-2"
+    },
+    "date": "May-01"
+  },
+  {
+    "id": "3",
+    "homeTeam": {
+      "logoUrl": "https://midfield.mlbstatic.com/v1/team/147/spots/72",
+      "name": "New York Yankees",
+      "shortName": "NYY",
+      "record": "10-2"
+    },
+    "awayTeam": {
+      "logoUrl": "https://midfield.mlbstatic.com/v1/team/110/spots/72",
+      "name": "Baltimore Orioles",
+      "shortName": "BAL",
+      "record": "10-2"
+    },
+    "date": "May-01"
+  },
+  {
+    "id": "3",
+    "homeTeam": {
+      "logoUrl": "https://midfield.mlbstatic.com/v1/team/147/spots/72",
+      "name": "New York Yankees",
+      "shortName": "NYY",
+      "record": "10-2"
+    },
+    "awayTeam": {
+      "logoUrl": "https://midfield.mlbstatic.com/v1/team/110/spots/72",
+      "name": "Baltimore Orioles",
+      "shortName": "BAL",
+      "record": "10-2"
+    },
+    "date": "May-01"
+  },
+  {
+    "id": "3",
+    "homeTeam": {
+      "logoUrl": "https://midfield.mlbstatic.com/v1/team/147/spots/72",
+      "name": "New York Yankees",
+      "shortName": "NYY",
+      "record": "10-2"
+    },
+    "awayTeam": {
+      "logoUrl": "https://midfield.mlbstatic.com/v1/team/110/spots/72",
+      "name": "Baltimore Orioles",
+      "shortName": "BAL",
+      "record": "10-2"
+    },
+    "date": "May-01"
+  },
+  {
+    "id": "3",
+    "homeTeam": {
+      "logoUrl": "https://midfield.mlbstatic.com/v1/team/147/spots/72",
+      "name": "New York Yankees",
+      "shortName": "NYY",
+      "record": "10-2"
+    },
+    "awayTeam": {
+      "logoUrl": "https://midfield.mlbstatic.com/v1/team/110/spots/72",
+      "name": "Baltimore Orioles",
+      "shortName": "BAL",
+      "record": "10-2"
+    },
+    "date": "May-01"
+  },
+  {
+    "id": "3",
+    "homeTeam": {
+      "logoUrl": "https://midfield.mlbstatic.com/v1/team/147/spots/72",
+      "name": "New York Yankees",
+      "shortName": "NYY",
+      "record": "10-2"
+    },
+    "awayTeam": {
+      "logoUrl": "https://midfield.mlbstatic.com/v1/team/110/spots/72",
+      "name": "Baltimore Orioles",
+      "shortName": "BAL",
+      "record": "10-2"
+    },
+    "date": "May-01"
+  },
+  {
+    "id": "3",
+    "homeTeam": {
+      "logoUrl": "https://midfield.mlbstatic.com/v1/team/147/spots/72",
+      "name": "New York Yankees",
+      "shortName": "NYY",
+      "record": "10-2"
+    },
+    "awayTeam": {
+      "logoUrl": "https://midfield.mlbstatic.com/v1/team/110/spots/72",
+      "name": "Baltimore Orioles",
+      "shortName": "BAL",
+      "record": "10-2"
+    },
+    "date": "May-01"
+  }
+]

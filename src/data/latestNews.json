@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "href": "https://www.liga.com/noticia-1",
+    "imgSrc": "https://via.placeholder.com/150",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut dolor at nunc aliquam.",
+    "imgAlt": "Imagen de la noticia 1"
+  },
+  {
+    "id": 2,
+    "href": "https://www.liga.com/noticia-1",
+    "imgSrc": "https://via.placeholder.com/150",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut dolor at nunc aliquam.",
+    "imgAlt": "Imagen de la noticia 1"
+  },
+  {
+    "id": 3,
+    "href": "https://www.liga.com/noticia-1",
+    "imgSrc": "https://via.placeholder.com/150",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut dolor at nunc aliquam.",
+    "imgAlt": "Imagen de la noticia 1"
+  },
+  {
+    "id": 4,
+    "href": "https://www.liga.com/noticia-1",
+    "imgSrc": "https://via.placeholder.com/150",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut dolor at nunc aliquam.",
+    "imgAlt": "Imagen de la noticia 1"
+  }
+]
