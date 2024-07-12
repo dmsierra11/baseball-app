@@ -12,7 +12,7 @@ import NewsPage from "./pages/NewsPage";
 import { ResponsiveAppBar, Container } from "fantasy-baseball-ui";
 // import reactLogo from "./assets/LMS.png";
 
-const pages = ['Estadísticas', 'Calendario', 'Resultados', 'Equipos', 'Contacto'];
+const pages = ['Noticias', 'Calendario', 'Resultados', 'Equipos'];
 const settings = ['Inicia Sesión'];
 
 const App: React.FC = () => (

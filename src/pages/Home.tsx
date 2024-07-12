@@ -33,9 +33,6 @@ const Home: React.FC = () => {
               link={
                 "https://www.mlb.com/news/news/article/2024/03/01/103-nyy-baltimore-orioles-game-news-and-updates"
               }
-              sx={{
-                marginBottom: "100px",
-              }}
             />
           </div>
           <GamesList games={matches} sectionTitle={"Ultimos Resultados"} />
