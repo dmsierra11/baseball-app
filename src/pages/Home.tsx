@@ -8,15 +8,14 @@ import {
   Grid,
   Stack,
 } from "fantasy-baseball-ui";
-import { useLatestNews, useUpcomingMatches, usePlayerStats, useStandings, useResponsive } from "../hooks";
+import { useLatestNews, useUpcomingMatches, usePlayerStats, useStandings, useGameResults } from "../hooks";
 
 const Home: React.FC = () => {
   const news = useLatestNews();
   const matches = useUpcomingMatches();
   const { battingLeaders, pitchingLeaders } = usePlayerStats();
   const standings = useStandings();
-  const { isXs, isSm, isMd, isLg, isXl } = useResponsive();
-  console.log(isXs, isSm, isMd, isLg, isXl);
+  const gameResults = useGameResults();
 
   return (
     <Grid container spacing={2}>
@@ -35,22 +34,10 @@ const Home: React.FC = () => {
               }
             />
           </div>
-          <GamesList games={matches} sectionTitle={"Ultimos Resultados"} />
-          <GamesList games={matches} sectionTitle={"Próximos Partidos"} />
-          <Standings
-            title="Liga Unica"
-            leagueTables={[
-              {
-                division: "AL East",
-                teams: standings
-              },
-              {
-                division: "AL West",
-                teams: standings
-              }
-            ]}
-            stackDirection={`${isXs ? "column" : "row"}`}
-          />
+          <GamesList games={gameResults} sectionTitle={"Ultimos Resultados"} component="div" />
+          <GamesList games={matches} sectionTitle={"Próximos Partidos"} component="div" />
+          <PlayerStats players={battingLeaders} sectionTitle={"Líderes de bateo"} limit={10} />
+          <PlayerStats players={pitchingLeaders} sectionTitle={"Líderes de pitcheo"} limit={10} />
         </Stack>
       </Grid>
       <Grid item xs={12} lg={4}>
@@ -59,12 +46,19 @@ const Home: React.FC = () => {
             newsItems={news}
             sectionTitle={"Últimas Noticias"}
           />
-          <PlayerStats players={battingLeaders} sectionTitle={"Líderes de bateo"} />
+          <Standings
+            title="Liga Unica"
+            leagueTables={[
+              {
+                teams: standings
+              },
+            ]}
+            component="div"
+          />
           <LatestNews
             newsItems={news}
             sectionTitle={"Destacados"}
           />
-          <PlayerStats players={pitchingLeaders} sectionTitle={"Líderes de pitcheo"} />
         </Stack>
       </Grid>
     </Grid>
