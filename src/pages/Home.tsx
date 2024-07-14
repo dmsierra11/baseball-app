@@ -8,63 +8,54 @@ import {
   Grid,
   Stack,
 } from "fantasy-baseball-ui";
-import { useLatestNews, useUpcomingMatches, usePlayerStats, useStandings, useResponsive } from "../hooks";
+import { useLatestNews, useUpcomingMatches, usePlayerStats, useStandings, useGameResults, useHightlights } from "../hooks";
 
 const Home: React.FC = () => {
-  const news = useLatestNews();
+  const { topStory, latestNews } = useLatestNews();
+  const highlights = useHightlights();
   const matches = useUpcomingMatches();
   const { battingLeaders, pitchingLeaders } = usePlayerStats();
   const standings = useStandings();
-  const { isXs, isSm, isMd, isLg, isXl } = useResponsive();
-  console.log(isXs, isSm, isMd, isLg, isXl);
-
+  const gameResults = useGameResults();
+  console.log(topStory);
+  console.log(latestNews);
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} lg={8}>
         <Stack spacing={2}>
           <div>
             <TopStory
-              imageUrl={
-                "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/wcjnkef8uossisdctcwd.jpg"
-              }
-              imageAlt={"Pittsburgh Penguins vs Baltimore Orioles"}
-              headline={"Pittsburgh Penguins vs Baltimore Orioles"}
-              description={"Pittsburgh Penguins vs Baltimore Orioles"}
-              link={
-                "https://www.mlb.com/news/news/article/2024/03/01/103-nyy-baltimore-orioles-game-news-and-updates"
-              }
+              imageUrl={topStory.imgSrc}
+              headline={topStory.title}
+              description={topStory.text}
+              link={topStory.href}
             />
           </div>
-          <GamesList games={matches} sectionTitle={"Ultimos Resultados"} />
-          <GamesList games={matches} sectionTitle={"Próximos Partidos"} />
-          <Standings
-            title="Liga Unica"
-            leagueTables={[
-              {
-                division: "AL East",
-                teams: standings
-              },
-              {
-                division: "AL West",
-                teams: standings
-              }
-            ]}
-            stackDirection={`${isXs ? "column" : "row"}`}
-          />
+          <GamesList games={gameResults} sectionTitle={"Ultimos Resultados"} component="div" />
+          <GamesList games={matches} sectionTitle={"Próximos Partidos"} component="div" />
+          <PlayerStats players={battingLeaders} sectionTitle={"Líderes de bateo"} limit={10} />
+          <PlayerStats players={pitchingLeaders} sectionTitle={"Líderes de pitcheo"} limit={10} />
         </Stack>
       </Grid>
       <Grid item xs={12} lg={4}>
         <Stack spacing={2}>
           <LatestNews
-            newsItems={news}
+            newsItems={latestNews}
             sectionTitle={"Últimas Noticias"}
           />
-          <PlayerStats players={battingLeaders} sectionTitle={"Líderes de bateo"} />
+          <Standings
+            title="Liga Unica"
+            leagueTables={[
+              {
+                teams: standings
+              },
+            ]}
+            component="div"
+          />
           <LatestNews
-            newsItems={news}
+            newsItems={highlights}
             sectionTitle={"Destacados"}
           />
-          <PlayerStats players={pitchingLeaders} sectionTitle={"Líderes de pitcheo"} />
         </Stack>
       </Grid>
     </Grid>

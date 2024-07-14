@@ -1,4 +1,4 @@
-import standings from '../data/standings.json'
+import standings from '../data/json/stats/standings.json'
 
 export const useStandings = () => {
     return standings;
