@@ -4,3 +4,4 @@ export * from "./useGameResults";
 export * from "./usePlayerStats";
 export * from "./useStandings";
 export * from "./useResponsive";
+export * from "./useHightlights";

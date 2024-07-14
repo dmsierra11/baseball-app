@@ -8,30 +8,27 @@ import {
   Grid,
   Stack,
 } from "fantasy-baseball-ui";
-import { useLatestNews, useUpcomingMatches, usePlayerStats, useStandings, useGameResults } from "../hooks";
+import { useLatestNews, useUpcomingMatches, usePlayerStats, useStandings, useGameResults, useHightlights } from "../hooks";
 
 const Home: React.FC = () => {
-  const news = useLatestNews();
+  const { topStory, latestNews } = useLatestNews();
+  const highlights = useHightlights();
   const matches = useUpcomingMatches();
   const { battingLeaders, pitchingLeaders } = usePlayerStats();
   const standings = useStandings();
   const gameResults = useGameResults();
-
+  console.log(topStory);
+  console.log(latestNews);
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} lg={8}>
         <Stack spacing={2}>
           <div>
             <TopStory
-              imageUrl={
-                "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/wcjnkef8uossisdctcwd.jpg"
-              }
-              imageAlt={"Pittsburgh Penguins vs Baltimore Orioles"}
-              headline={"Pittsburgh Penguins vs Baltimore Orioles"}
-              description={"Pittsburgh Penguins vs Baltimore Orioles"}
-              link={
-                "https://www.mlb.com/news/news/article/2024/03/01/103-nyy-baltimore-orioles-game-news-and-updates"
-              }
+              imageUrl={topStory.imgSrc}
+              headline={topStory.title}
+              description={topStory.text}
+              link={topStory.href}
             />
           </div>
           <GamesList games={gameResults} sectionTitle={"Ultimos Resultados"} component="div" />
@@ -43,7 +40,7 @@ const Home: React.FC = () => {
       <Grid item xs={12} lg={4}>
         <Stack spacing={2}>
           <LatestNews
-            newsItems={news}
+            newsItems={latestNews}
             sectionTitle={"Últimas Noticias"}
           />
           <Standings
@@ -56,7 +53,7 @@ const Home: React.FC = () => {
             component="div"
           />
           <LatestNews
-            newsItems={news}
+            newsItems={highlights}
             sectionTitle={"Destacados"}
           />
         </Stack>

@@ -1,13 +1,8 @@
-import { useState, useEffect } from 'react';
-import type { NewsItemType } from 'fantasy-baseball-ui'
-import latestNews from '../data/json/latestNews.json'
+import latestNews from '../data/json/news/latestNews.json'
 
 export const useLatestNews = () => {
-    const [news, setNews] = useState<NewsItemType[]>([]);
-
-    useEffect(() => {
-        setNews(latestNews as unknown as NewsItemType[]);
-    }, []);
-
-    return news;
+    return {
+        topStory: latestNews.slice(0, 1)[0],
+        latestNews: latestNews.slice(1, 4),
+    };
 };
