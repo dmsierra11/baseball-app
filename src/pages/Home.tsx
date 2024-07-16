@@ -17,19 +17,17 @@ const Home: React.FC = () => {
   const { battingLeaders, pitchingLeaders } = usePlayerStats();
   const standings = useStandings();
   const gameResults = useGameResults();
-  console.log(topStory);
-  console.log(latestNews);
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} lg={8}>
         <Stack spacing={2}>
           <div>
-            <TopStory
+            {topStory && <TopStory
               imageUrl={topStory.imgSrc}
               headline={topStory.title}
               description={topStory.text}
               link={topStory.href}
-            />
+            />}
           </div>
           <GamesList games={gameResults} sectionTitle={"Ultimos Resultados"} component="div" />
           <GamesList games={matches} sectionTitle={"Próximos Partidos"} component="div" />
@@ -39,10 +37,11 @@ const Home: React.FC = () => {
       </Grid>
       <Grid item xs={12} lg={4}>
         <Stack spacing={2}>
+          {latestNews.length > 0 && 
           <LatestNews
             newsItems={latestNews}
             sectionTitle={"Últimas Noticias"}
-          />
+          />}
           <Standings
             title="Liga Unica"
             leagueTables={[
