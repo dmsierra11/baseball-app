@@ -33,8 +33,8 @@ const Home: React.FC = () => {
           </div>
           <GamesList games={gameResults} sectionTitle={"Ultimos Resultados"} component="div" />
           <GamesList games={matches} sectionTitle={"Próximos Partidos"} component="div" />
-          <PlayerStats players={battingLeaders} sectionTitle={"Líderes de bateo"} limit={10} />
-          <PlayerStats players={pitchingLeaders} sectionTitle={"Líderes de pitcheo"} limit={10} />
+          {battingLeaders.length > 0 && <PlayerStats players={battingLeaders} sectionTitle={"Líderes de bateo"} limit={10} />}
+          {pitchingLeaders.length > 0 && <PlayerStats players={pitchingLeaders} sectionTitle={"Líderes de pitcheo"} limit={10} />}
         </Stack>
       </Grid>
       <Grid item xs={12} lg={4}>
