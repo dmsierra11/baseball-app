@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { MatchType } from 'fantasy-baseball-ui';
-
-const BASE_URL = import.meta.env.VITE_BASE_URL;
+import { BASE_URL } from '../config/api';
 
 export const useGameResults = () => {
     const [matches, setMatches] = useState<MatchType[]>([]);
