@@ -1,7 +1,19 @@
-
-import batting from '../data/json/stats/battingStats.json'
-import pitching from '../data/json/stats/pitchingStats.json'
+import { useState, useEffect } from 'react';
+import { BASE_URL } from '../config/api';
+import { PlayerStatsType } from 'fantasy-baseball-ui';
 
 export const usePlayerStats = () => {
-    return { battingLeaders: batting, pitchingLeaders: pitching };
+    const [battingLeaders, setBattingLeaders] = useState<PlayerStatsType[]>([]);
+    const [pitchingLeaders, setPitchingLeaders] = useState<PlayerStatsType[]>([]);
+
+    useEffect(() => {
+        fetch(`${BASE_URL}/stats?type=batting`)
+            .then((response) => response.json())
+            .then((data) => setBattingLeaders(data as unknown as PlayerStatsType[]));
+
+        fetch(`${BASE_URL}/stats?type=pitching`)
+            .then((response) => response.json())
+            .then((data) => setPitchingLeaders(data as unknown as PlayerStatsType[]));
+    }, []);
+    return { battingLeaders, pitchingLeaders };
 }
