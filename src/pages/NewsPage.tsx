@@ -1,9 +1,24 @@
+import { Container, Stack, TopStory } from "fantasy-baseball-ui";
+import { useLatestNews } from "../hooks";
+
 const NewsPage: React.FC = () => {
-    return (
-        <div>
-            <h1>Últimas Noticias</h1>
-        </div>
-    );
+  const { latestNews } = useLatestNews();
+
+  return (
+    <Container maxWidth="md">
+      <Stack spacing={2}>
+        {latestNews.length > 0 &&
+          latestNews.map((news) => (
+            <TopStory
+              imageUrl={news.imgSrc}
+              headline={news.title}
+              description={news.text}
+              link={news.href}
+            />
+          ))}
+      </Stack>
+    </Container>
+  );
 };
 
 export default NewsPage;
