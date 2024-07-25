@@ -29,16 +29,14 @@ const Home: React.FC = () => {
     <Grid container spacing={2}>
       <Grid item xs={12} lg={8}>
         <Stack spacing={2}>
-          <div>
-            {topStory && (
-              <TopStory
-                imageUrl={topStory.imgSrc}
-                headline={topStory.title}
-                description={topStory.text}
-                link={topStory.href}
-              />
-            )}
-          </div>
+          {topStory && (
+            <TopStory
+              imageUrl={topStory.imgSrc}
+              headline={topStory.title}
+              description={topStory.text}
+              link={topStory.href}
+            />
+          )}
           {gameResults.length > 0 && (
             <GamesList
               games={gameResults}
@@ -78,7 +76,7 @@ const Home: React.FC = () => {
             />
           )}
           <Standings
-            title="Liga Unica"
+            title="Softball Summer Camp 2024"
             leagueTables={[
               {
                 teams: standings,
