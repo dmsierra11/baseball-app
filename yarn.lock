@@ -1386,10 +1386,10 @@ extend@^3.0.0:
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
   integrity sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==
 
-fantasy-baseball-ui@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/fantasy-baseball-ui/-/fantasy-baseball-ui-2.1.0.tgz#f386fa8fffe012af60167dad13f678063bc21109"
-  integrity sha512-oUu8uzFGivxsWhTwQHM7Tko+HVP4W2E/hN1fkZ0JdML8WFtGJ/GzPekdcLWGUOTcqQjZjgb5YVv/fCm7L9/ZuA==
+fantasy-baseball-ui@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/fantasy-baseball-ui/-/fantasy-baseball-ui-2.1.1.tgz#fed087d6f8393ab7140ade920a24215659401ac9"
+  integrity sha512-ohAKGuGpfm1Vtid0xE2uwXfq2rBbKXEQ7fUGhPyeVrUWp2nIinT8xqyqptQABlaQGGc0xWUwefGKB49zbWZGQg==
   dependencies:
     "@emotion/react" "^11.11.4"
     "@emotion/styled" "^11.11.5"
