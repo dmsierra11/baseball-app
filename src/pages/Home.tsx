@@ -56,6 +56,7 @@ const Home: React.FC = () => {
               players={battingLeaders}
               sectionTitle={"Líderes de bateo"}
               limit={newsLimit}
+              categories={["AB", "R", "H", "HR", "RBI"]}
             />
           )}
           {pitchingLeaders.length > 0 && (
@@ -63,6 +64,7 @@ const Home: React.FC = () => {
               players={pitchingLeaders}
               sectionTitle={"Líderes de pitcheo"}
               limit={newsLimit}
+              categories={["W", "L", "ERA", "IP", "SO", "BB", "SV"]}
             />
           )}
         </Stack>
