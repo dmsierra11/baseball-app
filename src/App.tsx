@@ -8,9 +8,16 @@ import ContactPage from "./pages/ContactPage";
 import NewsItem from "./pages/news/NewsItem";
 import { ResponsiveAppBar, Container } from "fantasy-baseball-ui";
 
+const pages = [
+  {
+    label: "Noticias",
+    path: "/news",
+  },
+];
+
 const App: React.FC = () => (
   <Router>
-    <ResponsiveAppBar logo="SoftballTotal" />
+    <ResponsiveAppBar logo="SoftballTotal" pages={pages} />
     <Container maxWidth="xl" sx={{ padding: 2 }}>
       <Routes>
         <Route path="/" element={<Home />} />
