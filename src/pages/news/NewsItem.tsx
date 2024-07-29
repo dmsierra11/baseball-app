@@ -25,6 +25,7 @@ const NewsItem = () => {
         <ReactMarkdown
           components={{
             h1: ({ node, ...props }) => (
+              // @ts-ignore//
               <Typography
                 variant="h2"
                 component="h1"
@@ -33,6 +34,7 @@ const NewsItem = () => {
               />
             ),
             h2: ({ node, ...props }) => (
+              // @ts-ignore
               <Typography
                 variant="h3"
                 component="h2"
@@ -41,6 +43,7 @@ const NewsItem = () => {
               />
             ),
             h3: ({ node, ...props }) => (
+              // @ts-ignore
               <Typography
                 variant="h4"
                 component="h3"
@@ -49,6 +52,7 @@ const NewsItem = () => {
               />
             ),
             h4: ({ node, ...props }) => (
+              // @ts-ignore
               <Typography
                 variant="h5"
                 component="h4"
@@ -57,6 +61,7 @@ const NewsItem = () => {
               />
             ),
             h5: ({ node, ...props }) => (
+              // @ts-ignore
               <Typography
                 variant="h6"
                 component="h5"
@@ -65,6 +70,7 @@ const NewsItem = () => {
               />
             ),
             p: ({ node, ...props }) => (
+              // @ts-ignore
               <Typography component="p" marginBottom={2} {...props} />
             ),
             blockquote: ({ node, ...props }) => (
@@ -79,6 +85,7 @@ const NewsItem = () => {
                   bgcolor: "background.paper",
                 }}
               >
+                {/* @ts-ignore */}
                 <Typography
                   variant="body1"
                   component="blockquote"
@@ -88,9 +95,11 @@ const NewsItem = () => {
               </Paper>
             ),
             ul: ({ node, ...props }) => (
+              // @ts-ignore
               <Typography variant="body1" component="ul" {...props} />
             ),
             li: ({ node, ...props }) => (
+              // @ts-ignore
               <Typography variant="body1" component="li" {...props} />
             ),
           }}
