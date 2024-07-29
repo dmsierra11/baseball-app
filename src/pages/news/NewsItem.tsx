@@ -1,21 +1,11 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
+import { useNewsContent } from "../../hooks/useNewsContent";
 import { Container, Typography, Box, Paper } from "fantasy-baseball-ui";
 
 const NewsItem = () => {
   const { id } = useParams();
-  const [content, setContent] = useState("");
-
-  useEffect(() => {
-    fetch(`/src/pages/news/content/${id}.md`)
-      .then((response) => response.text())
-      .then((text) => {
-        console.log("Fetched content:", text); // Debug log
-        setContent(text);
-      })
-      .catch((error) => console.error("Error loading markdown file:", error));
-  }, [id]);
+  const { content } = useNewsContent(id || "");
 
   console.log("Rendering with content:", content); // Debug log
 
