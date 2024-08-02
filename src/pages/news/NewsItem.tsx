@@ -19,7 +19,7 @@ const NewsItem = () => {
               <Typography
                 variant="h2"
                 component="h1"
-                style={{ color: "#1976d2", marginBottom: "16px" }}
+                style={{ marginBottom: "16px" }}
                 {...props}
               />
             ),
@@ -28,7 +28,7 @@ const NewsItem = () => {
               <Typography
                 variant="h3"
                 component="h2"
-                style={{ color: "#1976d2", marginBottom: "16px" }}
+                style={{ marginBottom: "16px" }}
                 {...props}
               />
             ),
@@ -37,7 +37,7 @@ const NewsItem = () => {
               <Typography
                 variant="h4"
                 component="h3"
-                style={{ color: "#1976d2", marginBottom: "16px" }}
+                style={{ marginBottom: "16px" }}
                 {...props}
               />
             ),
@@ -46,7 +46,7 @@ const NewsItem = () => {
               <Typography
                 variant="h5"
                 component="h4"
-                style={{ color: "#1976d2", marginBottom: "16px" }}
+                style={{ marginBottom: "16px" }}
                 {...props}
               />
             ),
@@ -55,7 +55,7 @@ const NewsItem = () => {
               <Typography
                 variant="h6"
                 component="h5"
-                style={{ color: "#1976d2", marginBottom: "16px" }}
+                style={{ marginBottom: "16px" }}
                 {...props}
               />
             ),
